@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require "yaml"
+
+# Loading settings
+settings = YAML::load(File.read("sites.yaml"))
+
+# Clean sites
+`sudo bin/clear-nginx.sh`
+
+# Setup sites
+if settings.include? "sites"
+    settings["sites"].each do |site|
+      puts "Create site: #{site['name']}"
+      `sudo bin/serve.sh #{site["name"]} #{site["root"]}`
+      `sudo bin/hosts-updater.sh #{site["name"]}`
+    end
+end
+
+# Reload nginx php-fpm
+`sudo systemctl reload nginx php-fpm`

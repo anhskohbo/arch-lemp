@@ -1,0 +1,25 @@
+---
+sites:
+  - name: local.dev
+    root: /home/vananh/www/local.dev
+
+  - name: wp.dev
+    root: /home/vananh/www/wp.dev
+
+  - name: test.dev
+    root: /home/vananh/www/test.dev
+
+  - name: phim.dev
+    root: /home/vananh/www/phim.dev
+
+  - name: update.awethemes.dev
+    root: /home/vananh/www/update.awethemes.dev/public
+
+  - name: semente.dev
+    root: /home/vananh/www/semente.dev
+
+  - name: see-link.dev
+    root: /home/vananh/www/see-link.dev
+
+  - name: vnbus.dev
+    root: /home/vananh/www/vnbus.dev
